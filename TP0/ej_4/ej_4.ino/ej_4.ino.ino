@@ -103,6 +103,7 @@ void maquinaTemperatura() {
     case VUA:
     if (digitalRead(BOTON1) == LOW){
       temperaturaUmbral = temperaturaUmbral + 1;
+      estado = MODO2;
     }
     if (digitalRead(BOTON2) == LOW){
       estado = ESPERA2;
@@ -111,6 +112,7 @@ void maquinaTemperatura() {
     case VUD:
      if (digitalRead(BOTON2) == LOW){
       temperaturaUmbral = temperaturaUmbral - 1;
+      estado = MODO2;
     }
      if (digitalRead(BOTON1) == LOW){
       estado = ESPERA2;
